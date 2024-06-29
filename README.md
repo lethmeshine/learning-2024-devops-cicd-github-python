@@ -20,3 +20,17 @@ Ce projet contient plusieurs fichiers de code Python et des workflows GitHub Act
 5. `.github/workflows/label.yml` : Ce fichier YAML définit un autre workflow GitHub Actions qui est déclenché lorsqu'une pull request est créée. Il utilise l'action 'actions/labeler@v5' pour appliquer automatiquement des labels aux pull requests en fonction des fichiers modifiés.
 
 6. `.github/labeler.yml` : Ce fichier contient la configuration pour l'action 'actions/labeler@v5'. Il définit les règles pour l'application des labels en fonction des fichiers modifiés dans une pull request.
+
+# Exercice
+
+Dans cet exercice, vous allez devoir modifier le code Python existant et soumettre vos modifications via une Pull Request (PR).
+
+1. **Modification de la fonction `add2`** : Actuellement, la fonction `add2` dans `calc.py` ajoute deux valeurs ensemble. Votre tâche est de modifier cette fonction pour qu'elle puisse prendre un nombre illimité d'arguments et les ajouter tous ensemble. N'oubliez pas de gérer le cas où l'un des arguments est une chaîne de caractères.
+
+2. **Ajout de tests unitaires** : Une fois que vous avez modifié la fonction `add2`, vous devez ajouter des tests unitaires supplémentaires dans `test_calc.py` pour vérifier que votre nouvelle fonction fonctionne correctement. Assurez-vous de tester plusieurs cas, y compris le cas où aucun argument n'est fourni, le cas où un seul argument est fourni, le cas où plusieurs arguments sont fournis, et le cas où l'un des arguments est une chaîne de caractères.
+
+3. **Documentation** : Enfin, mettez à jour la documentation dans le code (les commentaires) pour refléter les modifications que vous avez apportées. Assurez-vous que la documentation est claire et précise.
+
+Une fois que vous avez terminé ces tâches, créez une nouvelle branche, commitez vos modifications et soumettez une PR. Assurez-vous d'inclure une description détaillée de vos modifications dans le message de votre commit et dans la description de votre PR.
+
+Bonne chance !
