@@ -1,0 +1,11 @@
+# .github/labeler.yml
+# Add 'label1' to any changes within 'example_folder' folder or any subfolders
+python:
+- *py
+
+# Add 'label2' to any file changes within 'example_folder2/src' folder
+documentation:
+- *md
+
+yaml:
+- *yml
