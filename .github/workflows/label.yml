@@ -5,18 +5,30 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
+# The name of the workflow
 name: Labeler
+
+# The events that trigger the workflow
 on: [pull_request_target]
 
+# The jobs that the workflow will run
 jobs:
+  # The name of the job
   label:
 
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
+    # The permissions that the job needs
     permissions:
       contents: read
       pull-requests: write
 
+    # The steps that the job will run
     steps:
+    # This step uses the actions/labeler@v5 action
     - uses: actions/labeler@v5
+      # The parameters for the actions/labeler@v5 action
       with:
+        # The GitHub token, which is used to authenticate with the GitHub API
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
