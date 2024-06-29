@@ -6,8 +6,16 @@ NOTE: If a value submitted to the 'add2' function is a float, it must be done so
 in quotes (i.e. as a string).
 '''
 
-# If 'value' is not an integer, convert it to a float and failing that, a string.
 def conv(value):
+    '''
+    If 'value' is not an integer, convert it to a float and failing that, a string.
+
+    Parameters:
+    value (int, float, str): The value to be converted.
+
+    Returns:
+    int, float, str: The converted value.
+    '''
     try:
         return int(value)
     except ValueError:
@@ -16,8 +24,19 @@ def conv(value):
         except ValueError:
             return str(value)
 
-# The 'add2' function itself
 def add2(arg1, arg2):
+    '''
+    The 'add2' function itself. It takes two arguments, converts them to their appropriate types
+    using the 'conv' function, and adds them together. If either argument is a string, it ensures
+    both are strings before concatenating them.
+
+    Parameters:
+    arg1 (int, float, str): The first value to be added.
+    arg2 (int, float, str): The second value to be added.
+
+    Returns:
+    int, float, str: The result of the addition or concatenation.
+    '''
     # Convert 'arg1' and 'arg2' to their appropriate types
     arg1conv = conv(arg1)
     arg2conv = conv(arg2)
