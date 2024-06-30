@@ -34,3 +34,7 @@ Dans cet exercice, vous allez devoir modifier le code Python existant et soumett
 Une fois que vous avez terminé ces tâches, créez une nouvelle branche, commitez vos modifications et soumettez une PR. Assurez-vous d'inclure une description détaillée de vos modifications dans le message de votre commit et dans la description de votre PR.
 
 Bonne chance !
+
+## Préparation au CI avec d'autres plateformes
+
+faire un .gitlab-ci.yml et un Jenkinsfile.
