@@ -11,9 +11,9 @@ class TestCalc(unittest.TestCase):
     test_add_strings: Test the addition of strings returns them as one concatenated string.
     test_add_string_and_integer: Test the addition of a string and an integer returns them as one concatenated string.
     test_add_string_and_number: Test the addition of a string and a float returns them as one concatenated string.
-    test_add_no_args: Test that calling add2 with no arguments returns None.
+    test_add_no_args: Test if no arguments are passed to the addAll function.
     test_add_one_arg: Test that calling add2 with one argument returns that argument.
-    test_add_mixed_args: Test the addition of mixed types returns the correct result.
+    test_add_mixed_args: Test the addition of multiples strings and floats returns them as one concatenated string (in which the float is converted to a string).
     """
 
     def test_add_integers(self):
@@ -53,10 +53,10 @@ class TestCalc(unittest.TestCase):
 
     def test_add_no_args(self):
         """
-        Test that calling add2 with no arguments returns None.
+        Test if no arguments are passed to the addAll function.
         """
-        result = calc.add2()
-        self.assertIsNone(result)
+        result = calc.addAll([])
+        self.assertEqual(result, '')
 
     def test_add_one_arg(self):
         """
@@ -67,10 +67,11 @@ class TestCalc(unittest.TestCase):
 
     def test_add_mixed_args(self):
         """
-        Test the addition of mixed types returns the correct result.
+        Test the addition of multiples strings and floats returns them as one
+        concatenated string (in which the float is converted to a string).
         """
-        result = calc.add2(1, '2', 3.0)
-        self.assertEqual(result, '123.0')
+        result = calc.addAll(['abc', '5.5', 'def', '49'])
+        self.assertEqual(result, 'abc5.5def49')
 
 if __name__ == '__main__':
     '''
