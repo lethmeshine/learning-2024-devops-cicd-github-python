@@ -6,8 +6,6 @@ NOTE: If a value submitted to the 'add2' function is a float, it must be done so
 in quotes (i.e. as a string).
 '''
 
-import functools
-
 def conv(value):
     '''
     If 'value' is not an integer, convert it to a float and failing that, a string.
@@ -26,14 +24,14 @@ def conv(value):
         except ValueError:
             return str(value)
 
-def add2(*args):
+def add(*args):
     '''
-    The 'add2' function itself. It takes unlimited arguments, converts them to their appropriate types
-    using the 'conv' function, and adds them together. If either argument is a string, it ensures
-    both are strings before concatenating them.
+    The 'add' function itself. It takes unlimited arguments, converts them to their appropriate types
+    using the 'conv' function, and sums them up. If either argument is a string, it ensures
+    all of them are strings before concatenating them.
 
     Parameters:
-    args (int, float, str)[]: An array of values that need to be summed.
+    *args (int, float, str): An array of values that need to be summed.
 
     Returns:
     int, float, str: The result of the addition or concatenation.
